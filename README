@@ -1,1 +1,21 @@
-its just a mockup for a simple mvc
+its a No Framework PHP MVC.
+Loaded by loader,router,apc,pdo,input sanitizer, and
+can be use for mockup or simple web apps
+
+// Load module
+load::c('[controller name]');
+load::m('[model name]');
+load::v('[view/html name]');
+load::l('[library name]');
+
+// Define your route on index.php file
+// no htaccess: http://localhost.com/index.php/home
+// with htaccess: http://localhost.com/home
+// Adding route
+// load::l('router')->add('/[uri path]','[view/php/html name]');
+
+load::l('router')->add('/','home');
+//regex route
+load::l('router')->add('/home/(.+)/([0-9]+)','home');
+//run
+load::l('router')->run();
