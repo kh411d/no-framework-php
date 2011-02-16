@@ -7,8 +7,8 @@ define('VIEW_DIR',ROOT_DIR.'/view/');
 define('LIBRARY_DIR',ROOT_DIR.'/library/');
 
 //PDO DATABASE CREDENTIAL
-define('DB_ENGINE','mysql');
-define('DB_NAME','test');
-define('DB_HOST','localhost');
-define('DB_USER','root');
+define('DB_ENGINE','');
+define('DB_NAME','');
+define('DB_HOST','');
+define('DB_USER','');
 define('DB_PASSWORD','');
