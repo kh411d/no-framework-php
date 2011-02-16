@@ -8,6 +8,7 @@ Class Load
 	{
 	 if(!file_exists(CONTROLLER_DIR.$name.".php")) die("$name - File Not Found");
 	 require_once CONTROLLER_DIR.$name.".php";
+	 return self::set_instance($name);
 	}
 
 	public static function l($name)
