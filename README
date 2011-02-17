@@ -9,14 +9,14 @@ and load one controller on your view file
 // Load module
 load::c('[controller name]');
 load::m('[model name]');
-load::v('[view/html name]');
+load::v('[view name]');
 load::l('[library name]');
 
 // Define your route on index.php file
 // no htaccess: http://localhost.com/index.php/home
 // with htaccess: http://localhost.com/home
 // Adding route
-// load::l('router')->add('/[uri path]','[view/php/html name]');
+// load::l('router')->add('/[uri path]','[view name]');
 
 load::l('router')->add('/','home');
 //regex route

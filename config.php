@@ -1,4 +1,9 @@
 <?php
+/*
+ * Define All your configuration here
+ *
+ */
+
 //DEFINED PATH
 define('ROOT_DIR',dirname(realpath(__FILE__)).'/');
 define('CONTROLLER_DIR',ROOT_DIR.'/controller/');
