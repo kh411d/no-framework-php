@@ -4,6 +4,9 @@
  *
  */
 
+//DEFINE SITE URL
+define('SITE_URL','http://localhost/');
+ 
 //DEFINED PATH
 define('ROOT_DIR',dirname(realpath(__FILE__)).'/');
 define('CONTROLLER_DIR',ROOT_DIR.'/controller/');
