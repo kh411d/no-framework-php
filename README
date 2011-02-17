@@ -3,8 +3,8 @@ Loaded by loader,router,apc,pdo,input sanitizer, and
 can be use for mockup or simple web apps
 
 //Rules
-load your model on your controller file or maybe view file, 
-and load one controller on your view file
+Load your model on your controller file or maybe view file, 
+and load a controller on your view file.
 
 // Load module
 load::c('[controller name]');
