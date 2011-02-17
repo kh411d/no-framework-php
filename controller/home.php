@@ -1,12 +1,20 @@
 <?php
  Class Home 
  {
-  public $items;
-  
+  protected $results;
   public function __construct()
-  {
+  { 
    //Logic here
-   $this->items['hello'] = "Hello World!";
+   
+   //Getting Arguments from URL Segments
+   $args = func_num_args() ? func_get_arg(0) : null;
+   
+   $this->results = array('hello'=>"Hello World!");
+  }
+  
+  public function get() 
+  {
+   return $this->results;
   }
   
  } 

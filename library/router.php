@@ -97,7 +97,7 @@
 			$def = $this->routes[$ind];
 			if(file_exists(VIEW_DIR.$def['view'].'.php'))
 			{
-			 load::v($def['view']);
+			 load::v($def['view'],$arguments);
 			 return;
 			}else{
 			 die('Could not call ' . json_encode($def) . " for route {$regex}");
