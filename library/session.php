@@ -8,15 +8,13 @@
 	
 	public function set($key,$value = NULL)
 	{
-	 if(empty($key))die('Session Key undefined');
 	 $_SESSION[$key] = $value;
 	 return $value;
 	}
 	
 	public function get($key)
 	{
-	 if(empty($key))die('Session Key undefined');
-	 return $_SESSION[$key] = $value;
+	 return $_SESSION[$key];
 	}
 	
 	public function end()
