@@ -34,7 +34,7 @@ Only 20 kb unzipped
  //Optional (you may want a simple static template)
  On your view file, load the CONTROLLER AT THE VERY TOP OF CODE LINE, by calling 
  extract(load::c('[controller name]')->getVars());
- and extract it if you have variables from the controller.
+ and extract it if you have output variables from the controller.
  
  You may load other view/template by calling 
  // load::v('[template file name]');
