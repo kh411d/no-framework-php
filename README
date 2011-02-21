@@ -47,7 +47,7 @@ Only 20 kb unzipped
  5. <?php load::v('footer');//End HTML ?>
  
 /* How to Create Library/Model? */
- Basicly you only need to create a reguler class base on your model/library file,
+ Basically you only need to create a reguler class base on your model/library file,
  its the same like controller does.
  ex : /model/home_m.php , and the class name will be, Class Home_m {}
  ex : /library/mylib_l.php , and the class name will be, Class mylib_l {}
