@@ -6,6 +6,7 @@
 
 //DEFINE SITE URL
 define('SITE_URL','http://localhost/');
+define('DEFAULT_ROUTE','home');
  
 //DEFINED PATH
 define('ROOT_DIR',dirname(realpath(__FILE__)).'/');
