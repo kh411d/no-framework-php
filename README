@@ -44,13 +44,15 @@ Extends the Abstract Controller class
  <h1><?php echo $hello;?> </h1>
  <?php load::v('footer');//End HTML ?>
  
-/* How to Create Model? */
+/* How to Create Library/Model? */
 Basicly you only need to create a reguler class base on your model file name,
 its the same like controller does.
 ex : /model/home_m.php , and the class name will be, Class Home_m {}
+ex : /library/mylib_l.php , and the class name will be, Class mylib_l {}
 
-You may load the model anytime anywhere by calling 
+You may load the library or model anytime anywhere by calling 
 load::m('[model name]')->[method name]
+load::l('[library name]')->[method name]
  
  
   
