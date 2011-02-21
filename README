@@ -1,14 +1,10 @@
+/* Whats this? */
 its a No Framework PHP MVC.
 a really really small framework... believe it or not!
+Only 20 kb unzipped
 
 /* Rules */
 Controller is must be load directly on your view file
-
-/* Wrappers */
-load::c('[controller name]');
-load::m('[model name]');
-load::v('[view name]');
-load::l('[library name]');
 
 /* Define your route on route.php file                            */
 /* load::l('router')->add('/[uri path]','[template file name]');  */
@@ -35,7 +31,7 @@ Extends the Abstract Controller class
  Save your view file at view dir, ex: /view/home.php 
  
  //Optional (you may want a simple static template)
- On your view file, load the CONTROLLER AT THE VERY TOP OF THE LINE CODE,  by calling 
+ On your view file, load the CONTROLLER AT THE VERY TOP OF CODE LINE, by calling 
  extract(load::c('[controller name]')->getVars());
  and extract it if you have variables from the controller.
  
@@ -59,5 +55,9 @@ You may load the library or model anytime anywhere by calling
 load::m('[model name]')->[method name]
 load::l('[library name]')->[method name]
  
- 
+/* Wrappers */
+load::c('[controller name]',[arguments array optional]);
+load::m('[model name]',[arguments array optional]);
+load::v('[view name]',[arguments array optional]);
+load::l('[library name]',[arguments array optional]); 
   
