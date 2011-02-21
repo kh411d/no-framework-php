@@ -25,15 +25,15 @@ Only 20 kb unzipped
    $this->setVars(array('hello'=>"Hello World!"));
   }
  }
- 
- Controller is must be load directly on your view file 
+ //!important!
+ Controller must be load directly on your view file 
 
 /* How to Create your Template/View? */
  Save your view file at view dir, ex: /view/home.php 
  
  //Optional (you may want a simple static template)
  On your view file, load the CONTROLLER AT THE VERY TOP OF CODE LINE, by calling 
- extract(load::c('[controller name]')->getVars());
+ extract(load::c('[controller name]')->getOutput());
  and extract it if you have output variables from the controller.
  
  You may load other view/template by calling 

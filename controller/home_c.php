@@ -6,7 +6,7 @@
    //Getting Regex Arguments from URL Segments if exists (optional)
    $reg = load::l('router')->reg_segments;
    
-   $this->setVars(array('hello'=>"Hello World!"));
+   $this->setOutput(array('hello'=>"Hello World!"));
   }
  } 
  
