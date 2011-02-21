@@ -60,7 +60,7 @@
    return $_POST[$key];
   }
   
-  protected function clean_input_data($str)
+  public function clean_input_data($str)
 	{
 		if (is_array($str))
 		{
