@@ -12,7 +12,7 @@ Only 20 kb unzipped
 
 /* How to Create Controller? */
  Save your controller file at controller dir, ex: /controller/home_c.php 
- the class name will be Class Home_c{}, and then extends the Controller abstract class 
+ the class name will be Class Home_c{}, and then extend it with Controller abstract class 
  
  Class Home_c extends Controller
  {
