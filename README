@@ -1,25 +1,56 @@
 its a No Framework PHP MVC.
-Loaded by loader,router,apc,pdo,input sanitizer, and
-can be use for mockup or simple web apps
+a really really small framework... believe it or not!
 
-//Rules
-Load your model on your controller file or maybe view file, 
-and load a controller on your view file.
+/* Rules */
+Controller is must be load directly on your view file
 
-// Load module
+/* How to Load module? */
 load::c('[controller name]');
 load::m('[model name]');
 load::v('[view name]');
 load::l('[library name]');
 
-// Define your route on index.php file
-// no htaccess: http://localhost.com/index.php/home
-// with htaccess: http://localhost.com/home
-// Adding route
-// load::l('router')->add('/[uri path]','[view name]');
-
+/* Define your route on route.php file                            */
+/* load::l('router')->add('/[uri path]','[template file name]');  */
 load::l('router')->add('/','home');
-//regex route
-load::l('router')->add('/home/(.+)/([0-9]+)','home');
-//run
-load::l('router')->run();
+load::l('router')->add('/home/(.+)/([0-9]+)','home'); //Regex Route
+
+/* How to Create Controller? */
+Save your controller file at controller dir, ex: /controller/home_c.php 
+Extends the Abstract Controller class 
+ 
+ Class Home_c extends Controller
+ {
+  public function __construct()
+  {
+   //Getting Regex Arguments from URL Segments if exists (optional)
+   $reg = load::l('router')->reg_segments;
+   
+   //Set Template Variable
+   $this->setVars(array('hello'=>"Hello World!"));
+  }
+ }
+
+/* How to Create View? */
+ Save your view file at view dir, ex: /view/home.php 
+ on your view file, load the controller at the very top of the code, extract
+ it to get variables from the controller, and you may load other view/template
+ by calling load::v('[template file name]');
+ 
+ home.php <<<
+ <?php extract(load::c('home_c')->getVars()); //Load and extract controller variables ?>
+ 
+ <?php load::v('header'); //Begin HTML ?>
+ <h1><?php echo $hello;?> </h1>
+ <?php load::v('footer');//End HTML ?>
+ 
+/* How to Create Model? */
+Basicly you only need to create a reguler class base on your model file name,
+its the same like controller does.
+ex : /model/home_m.php , and the class name will be, Class Home_m {}
+
+You may load the model anytime anywhere by calling 
+load::m('[model name]')->[method name]
+ 
+ 
+  
