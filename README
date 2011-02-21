@@ -13,7 +13,7 @@ load::l('router')->add('/home/(.+)/([0-9]+)','home'); //Regex Route
 
 /* How to Create Controller? */
 Save your controller file at controller dir, ex: /controller/home_c.php 
-Extends the Abstract Controller class 
+and you need to extends the Controller abstract class 
  
  Class Home_c extends Controller
  {
