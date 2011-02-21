@@ -3,17 +3,16 @@ its a No Framework PHP MVC.
 a really really small framework... believe it or not!
 Only 20 kb unzipped
 
-/* Rules */
-Controller is must be load directly on your view file
-
-/* Define your route on route.php file                            */
-/* load::l('router')->add('/[uri path]','[template file name]');  */
-load::l('router')->add('/','home');
-load::l('router')->add('/home/(.+)/([0-9]+)','home'); //Regex Route
+/* How to Create Routes? */
+ Define your route on routes.php file, and add route by calling,                            
+ // load::l('router')->add('/[uri path]','[template file name]');  
+ 
+ load::l('router')->add('/','home');
+ load::l('router')->add('/home/(.+)/([0-9]+)','home'); //Regex Route
 
 /* How to Create Controller? */
-Save your controller file at controller dir, ex: /controller/home_c.php 
-and you need to extends the Controller abstract class 
+ Save your controller file at controller dir, ex: /controller/home_c.php 
+ the class name will be Class Home_c{}, and then extends the Controller abstract class 
  
  Class Home_c extends Controller
  {
@@ -26,6 +25,8 @@ and you need to extends the Controller abstract class
    $this->setVars(array('hello'=>"Hello World!"));
   }
  }
+ 
+ Controller is must be load directly on your view file 
 
 /* How to Create your Template/View? */
  Save your view file at view dir, ex: /view/home.php 
@@ -36,7 +37,7 @@ and you need to extends the Controller abstract class
  and extract it if you have variables from the controller.
  
  You may load other view/template by calling 
- load::v('[template file name]');
+ // load::v('[template file name]');
  
  home.php <<<
  1. <?php extract(load::c('home_c')->getVars()); //Load and extract controller variables ?>
@@ -46,18 +47,18 @@ and you need to extends the Controller abstract class
  5. <?php load::v('footer');//End HTML ?>
  
 /* How to Create Library/Model? */
-Basicly you only need to create a reguler class base on your model file name,
-its the same like controller does.
-ex : /model/home_m.php , and the class name will be, Class Home_m {}
-ex : /library/mylib_l.php , and the class name will be, Class mylib_l {}
+ Basicly you only need to create a reguler class base on your model file name,
+ its the same like controller does.
+ ex : /model/home_m.php , and the class name will be, Class Home_m {}
+ ex : /library/mylib_l.php , and the class name will be, Class mylib_l {}
 
-You may load the library or model anytime anywhere by calling 
-load::m('[model name]')->[method name]
-load::l('[library name]')->[method name]
- 
+ You may load the library or model anytime anywhere by calling 
+ // load::m('[model name]')->[method name]
+ // load::l('[library name]')->[method name]
+  
 /* Wrappers */
-load::c('[controller name]',[arguments array optional]);
-load::m('[model name]',[arguments array optional]);
-load::v('[view name]',[arguments array optional]);
-load::l('[library name]',[arguments array optional]); 
+ load::c('[controller name]',[arguments array optional]);
+ load::m('[model name]',[arguments array optional]);
+ load::v('[view name]',[arguments array optional]);
+ load::l('[library name]',[arguments array optional]); 
   
