@@ -31,11 +31,15 @@ Extends the Abstract Controller class
   }
  }
 
-/* How to Create View? */
+/* How to Create your Template/View? */
  Save your view file at view dir, ex: /view/home.php 
- on your view file, load the controller at the very top of the code, extract
- it to get variables from the controller, and you may load other view/template
- by calling load::v('[template file name]');
+ 
+ //Optional (you may want a simple static template)
+ On your view file, load the CONTROLLER AT THE VERY TOP OF THE LINE CODE, 
+ and extract it to get variables from the controller.
+ 
+ You may load other view/template by calling 
+ load::v('[template file name]');
  
  home.php <<<
  <?php extract(load::c('home_c')->getVars()); //Load and extract controller variables ?>
