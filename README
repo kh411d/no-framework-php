@@ -4,7 +4,7 @@ a really really small framework... believe it or not!
 /* Rules */
 Controller is must be load directly on your view file
 
-/* How to Load module? */
+/* Wrappers */
 load::c('[controller name]');
 load::m('[model name]');
 load::v('[view name]');
@@ -35,18 +35,19 @@ Extends the Abstract Controller class
  Save your view file at view dir, ex: /view/home.php 
  
  //Optional (you may want a simple static template)
- On your view file, load the CONTROLLER AT THE VERY TOP OF THE LINE CODE, 
- and extract it to get variables from the controller.
+ On your view file, load the CONTROLLER AT THE VERY TOP OF THE LINE CODE,  by calling 
+ extract(load::c('[controller name]')->getVars());
+ and extract it if you have variables from the controller.
  
  You may load other view/template by calling 
  load::v('[template file name]');
  
  home.php <<<
- <?php extract(load::c('home_c')->getVars()); //Load and extract controller variables ?>
- 
- <?php load::v('header'); //Begin HTML ?>
- <h1><?php echo $hello;?> </h1>
- <?php load::v('footer');//End HTML ?>
+ 1. <?php extract(load::c('home_c')->getVars()); //Load and extract controller variables ?>
+ 2.
+ 3. <?php load::v('header'); //Begin HTML ?>
+ 4. <h1><?php echo $hello;?> </h1>
+ 5. <?php load::v('footer');//End HTML ?>
  
 /* How to Create Library/Model? */
 Basicly you only need to create a reguler class base on your model file name,
