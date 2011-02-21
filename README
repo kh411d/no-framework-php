@@ -40,7 +40,7 @@ Only 20 kb unzipped
  // load::v('[template file name]');
  
  home.php <<<
- 1. <?php extract(load::c('home_c')->getVars()); //Load and extract controller variables ?>
+ 1. <?php extract(load::c('home_c')->getOutput()); //Load and extract controller variables ?>
  2.
  3. <?php load::v('header'); //Begin HTML ?>
  4. <h1><?php echo $hello;?> </h1>
