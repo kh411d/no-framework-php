@@ -1,4 +1,4 @@
-<?php extract(load::c('home',$args)->get()); //Load and extract controller results ?>
+<?php extract(load::c('home')->getVars()); //Load and extract controller variables ?>
 
 <?php load::v('header'); //Begin HTML ?>
 <h1><?php echo $hello;?> </h1>

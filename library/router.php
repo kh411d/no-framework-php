@@ -5,6 +5,7 @@
 	protected $regexes = array();
 	public $uri_string;
 	public $segments = array();
+	public $reg_segments = array();
 	public $permitted_uri_chars = 'a-z 0-9~%.:_\-';
 	
  
@@ -97,7 +98,8 @@
 			$def = $this->routes[$ind];
 			if(file_exists(VIEW_DIR.$def['view'].'.php'))
 			{
-			 load::v($def['view'],$arguments);
+			 $this->reg_segments = load::l('input')->clean_input_data($arguments);
+			 load::v($def['view']);
 			 return;
 			}else{
 			 die('Could not call ' . json_encode($def) . " for route {$regex}");

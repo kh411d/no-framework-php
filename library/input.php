@@ -43,8 +43,6 @@
 	$_GET = $this->clean_input_data($_GET);
    if(isset($_POST))	
 	$_POST = $this->clean_input_data($_POST);
-   if(isset($_COOKIE))	
-	$_COOKIE = $this->clean_input_data($_COOKIE);
   }
   
   public function get($key)

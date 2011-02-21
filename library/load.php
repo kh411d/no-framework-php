@@ -1,4 +1,5 @@
 <?php
+
 Class Load 
 {  
    public static $instance = array();
@@ -7,6 +8,7 @@ Class Load
 	public static function c($name,$args = array())
 	{
 	 if(!file_exists(CONTROLLER_DIR.$name.".php")) die("$name - File Not Found");
+	 require_once LIBRARY_DIR."controller.php";
 	 require_once CONTROLLER_DIR.$name.".php";
 	 return self::get_instance($name,$args);
 	}
