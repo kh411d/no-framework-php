@@ -23,21 +23,8 @@
 	
 	protected function fetch_uri_string()
 	{
-			if (is_array($_GET) && count($_GET) == 1 && trim(key($_GET), '/') != '')
-			{
-				$this->uri_string = key($_GET);
-				return;
-			}
-
 			$path = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : @getenv('PATH_INFO');
 			if (trim($path, '/') != '' && $path != "/".SELF)
-			{
-				$this->uri_string = $path;
-				return;
-			}
-
-			$path =  (isset($_SERVER['QUERY_STRING'])) ? $_SERVER['QUERY_STRING'] : @getenv('QUERY_STRING');
-			if (trim($path, '/') != '')
 			{
 				$this->uri_string = $path;
 				return;
