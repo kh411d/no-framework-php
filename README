@@ -22,7 +22,7 @@ Only 20 kb unzipped
    $reg = load::l('router')->reg_segments;
    
    //Set Template Variable
-   $this->setVars(array('hello'=>"Hello World!"));
+   $this->setOutput(array('hello'=>"Hello World!"));
   }
  }
  //!important!
