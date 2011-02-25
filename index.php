@@ -5,6 +5,9 @@ include "config.php";
 // Include Loader !Important!
 include LIBRARY_DIR."load.php";
 
+// Load Session
+load::l('session');
+
 // Sanitize all input !Important!
 load::l('input');
 
