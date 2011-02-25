@@ -18,13 +18,13 @@ Class db
 	}
  }
  
- public function query($sql,$params = NULL)
+ public function query($sql,$params = NULL,$return = PDO::FETCH_OBJ)
  {
 	try 
 	{
 	$sth = $this->dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 	$sth->execute($params);
-	return $sth->fetchAll(PDO::FETCH_OBJ);
+	return $sth->fetchAll($return);
 	} 
 	catch (PDOException $e)
 	{
@@ -33,13 +33,13 @@ Class db
 	}
  }
  
- public function get_row($sql,$params = NULL)
+ public function get_row($sql,$params = NULL,$return = PDO::FETCH_OBJ)
  {
 	try 
 	{
-	$sth = $this->dbh->prepare($sql);
-	$sth->execute($params);
-	return $sth->fetch(PDO::FETCH_OBJ);
+	 $sth = $this->dbh->prepare($sql);
+	 $sth->execute($params);
+	 return $sth->fetch($return);
 	} 
 	catch (PDOException $e)
 	{
