@@ -1,4 +1,5 @@
 <?php 
+//wowowowowo
 // Initialize !Important!
 include "config.php";
 
